@@ -1,0 +1,18 @@
+[package]
+name = "stardork"
+version = "0.7.0"
+edition = "2024"
+description = "StarDork: probe the wormholes and keep clear of the stars. Ryan Kulla's ncurses game, ported to Rust for the Asciiverse catalog."
+license = "GPL-2.0-only"
+repository = "https://github.com/theasciiverse/stardork"
+publish = false
+
+[dependencies]
+crossterm = "0.29"
+fastrand = "2"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
